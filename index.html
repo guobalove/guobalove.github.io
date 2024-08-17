@@ -22,13 +22,14 @@
         header {
             height: 100vh;
             background-size: cover;
-            background-position: center;
+            background-position: top center;
             background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
+            overflow: hidden; /* 添加这一行 */
         }
 
         header::before {
@@ -91,6 +92,7 @@
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
+            overflow: hidden;
         }
 
         h2 {
@@ -100,11 +102,13 @@
             color: #00ffff;
         }
 
-        .random-image {
+        .guoba-image {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            margin-bottom: 2rem;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+            max-height: 800px;
         }
 
         footer {
